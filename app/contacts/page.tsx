@@ -21,7 +21,7 @@ export default function GetInTouch() {
   });
 
   return (
-    <Paper shadow="md" radius="lg" bg={'rgba(0, 0, 0, 0.5)'} m={'10px 20px'}>
+    <Paper shadow="md" radius="lg" bg="rgba(0, 0, 0, 0.5)" m="10px 20px">
       <div
         className={classes.wrapper}
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)', height: 'auto' }}
@@ -34,12 +34,7 @@ export default function GetInTouch() {
           <ContactIconsList />
         </div>
 
-        <form
-          className={classes.form}
-          onSubmit={form.onSubmit((values) => {
-            console.log('Форма отправлена:', values);
-          })}
-        >
+        <form className={classes.form} onSubmit={form.onSubmit((values) => form.reset())}>
           <Text fz="lg" fw={700} className={classes.title}>
             Свяжитесь с нами
           </Text>

@@ -47,17 +47,17 @@ export function FooterLinks() {
     <Box component="footer">
       <Flex
         direction="row"
-        align={'center'}
-        maw={'inherit'}
-        m={'10px'}
-        p={'0 20px'}
+        align="center"
+        maw="inherit"
+        m="10px"
+        p="0 20px"
         justify="space-between"
         wrap="wrap"
       >
         <div className={classes.logo}>
           <img src={Logo.src} alt="logo" />
         </div>
-        <Flex wrap={'wrap'} gap={'250px'} visibleFrom="sm">
+        <Flex wrap="wrap" gap="250px" visibleFrom="sm">
           {groups}
         </Flex>
         <div className={classes.footerInfo}>
@@ -65,7 +65,7 @@ export function FooterLinks() {
         </div>
       </Flex>
 
-      <Flex align={'center'} justify="space-between" bg={'transparent'}>
+      <Flex align="center" justify="space-between" bg="transparent">
         <Text c="dimmed" size="sm">
           2012-2025 В е т е р а н
         </Text>

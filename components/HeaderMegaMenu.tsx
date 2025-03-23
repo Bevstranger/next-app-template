@@ -206,7 +206,7 @@ export function HeaderMegaMenu() {
         title="Навигация"
         hiddenFrom="sm"
         zIndex={1000000}
-        bg={'url(http://vetsec.ru/assets/app/img/menu_bg.jpg)'}
+        // bg={'url(http://vetsec.ru/assets/app/img/menu_bg.jpg)'}
       >
         <ScrollArea h="calc(100vh - 80px" mx="-md">
           <Divider my="sm" />

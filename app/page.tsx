@@ -29,7 +29,7 @@ export default function HomePage() {
   });
 
   return (
-    <Paper shadow="md" radius="lg" bg={'rgba(0, 0, 0, 0.5)'} m={'10px 20px'}>
+    <Paper shadow="md" radius="lg" bg="rgba(0, 0, 0, 0.5)" m="10px 20px">
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <Container size="sm" className="relative h-full flex items-center w-1/2">
           <div className="max-w-2xl text-white">
@@ -59,7 +59,7 @@ export default function HomePage() {
             <form
               className={classes.form}
               onSubmit={form.onSubmit((values) => {
-                console.log('Форма отправлена:', values);
+                alert(`Форма отправлена: ${JSON.stringify(values)}`);
               })}
             >
               <Text fz="lg" fw={700} className={classes.title}>
