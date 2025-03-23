@@ -29,6 +29,21 @@ const config = {
         printWidth: 70,
       },
     },
+    {
+      files: ['*.ts', '*.tsx'],
+      options: {
+        // Здесь можно добавить специфические настройки для TypeScript файлов
+        parser: 'typescript',
+
+      },
+    },
+    {
+      files: ['*.js', '*.jsx'],
+      options: {
+        // Здесь можно добавить специфические настройки для JavaScript файлов
+        parser: 'babel-ts',
+      },
+    },
   ],
 };
 

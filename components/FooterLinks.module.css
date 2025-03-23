@@ -1,0 +1,204 @@
+/* .footer {
+    margin-top: 120px;
+    padding-top: calc(var(--mantine-spacing-xl) * 2);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-transparent));
+    border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  }
+  
+  .logo {
+    max-width: 200px;
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .description {
+    margin-top: 5px;
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+      margin-top: var(--mantine-spacing-xs);
+      text-align: center;
+    }
+  }
+  
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  
+    @media (max-width: $mantine-breakpoint-xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .groups {
+    display: flex;
+    flex-wrap: wrap;
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: none;
+    }
+  }
+  
+  .wrapper {
+    width: 160px;
+  }
+  
+  .link {
+    display: block;
+    color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
+    font-size: var(--mantine-font-size-sm);
+    padding-top: 3px;
+    padding-bottom: 3px;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .title {
+    font-size: var(--mantine-font-size-lg);
+    font-weight: 700;
+    font-family:
+      Greycliff CF,
+      var(--mantine-font-family);
+    margin-bottom: calc(var(--mantine-spacing-xs) / 2);
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  }
+  
+  .afterFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--mantine-spacing-xl);
+    padding-top: var(--mantine-spacing-xl);
+    padding-bottom: var(--mantine-spacing-xl);
+    border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+      flex-direction: column;
+    }
+  }
+  
+  .social {
+    @media (max-width: $mantine-breakpoint-sm) {
+      margin-top: var(--mantine-spacing-xs);
+    }
+  } */
+  
+  /* .footer {
+    background-color: transparent;
+    color: #fff;
+     min-height: 100vh;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%; 
+      
+      
+    
+  } */
+  
+  /* .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: inherit;
+    margin: 10px 10px;
+    padding: 0 20px;
+  } */
+  
+  .logo {
+    /* width: 100px; */
+    /* margin-bottom: 20px; */
+    
+      }
+  .logo img {
+    filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 1));
+  }
+  
+  .copyright {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .contacts {
+    margin-bottom: 20px;
+  }
+  
+  .social {
+    /* margin-bottom: 20px; */
+  }
+  
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .socialIcons > * {
+    margin-right: 10px;
+  }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 20px;
+  }
+  
+.link {
+    display: flex;
+    
+    color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-green-1));
+    font-size: var(--mantine-font-size-md);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .title {
+   
+    font-size: var(--mantine-font-size-lg);
+    font-weight: 700;
+    
+  }
+
+  /* .groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 250px;
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: none;
+    }
+  } */
+
+  .afterFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    /* margin-top: var(--mantine-spacing-xl);
+    padding-top: var(--mantine-spacing-xl);
+    padding-bottom: var(--mantine-spacing-xl);
+    border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4)); */
+  
+    /* @media (max-width: $mantine-breakpoint-sm) {
+      flex-direction: column;
+    } */
+  }
+
+  .footerInfo {
+    display: flex;
+    flex-direction: column;
+  }
