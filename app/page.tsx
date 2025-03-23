@@ -28,6 +28,10 @@ export default function HomePage() {
     },
   });
 
+  const handleSubmit = (values: any) => {
+    console.log(`Форма отправлена: ${JSON.stringify(values)}`);
+  };
+
   return (
     <Paper shadow="md" radius="lg" bg="rgba(0, 0, 0, 0.5)" m="10px 20px">
       <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -56,12 +60,7 @@ export default function HomePage() {
         </Container>
         <Container className="w-1/2">
           <div>
-            <form
-              className={classes.form}
-              onSubmit={form.onSubmit((values) => {
-                alert(`Форма отправлена: ${JSON.stringify(values)}`);
-              })}
-            >
+            <form className={classes.form} onSubmit={form.onSubmit(handleSubmit)}>
               <Text fz="lg" fw={700} className={classes.title}>
                 Свяжитесь с нами
               </Text>

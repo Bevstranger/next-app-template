@@ -34,7 +34,7 @@ export default function GetInTouch() {
           <ContactIconsList />
         </div>
 
-        <form className={classes.form} onSubmit={form.onSubmit((values) => form.reset())}>
+        <form className={classes.form} onSubmit={form.onSubmit(() => form.reset())}>
           <Text fz="lg" fw={700} className={classes.title}>
             Свяжитесь с нами
           </Text>
