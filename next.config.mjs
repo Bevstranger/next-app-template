@@ -13,3 +13,8 @@ export default withBundleAnalyzer({
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
 });
+
+module.exports = {
+  output: 'export', // Экспорт статического сайта
+  basePath: '', // Если сайт находится в поддиректории
+};
