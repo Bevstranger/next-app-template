@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
   basePath: '/next-app-template', // Убедитесь, что это правильный basePath
+  assetPrefix: '/next-app-template',
   output: 'export', // Используйте только если вам нужен статический экспорт
   // Дополнительные настройки, если необходимо
   images: {

@@ -2,6 +2,7 @@
   "name": "mantine-next-template",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://bevstranger.github.io/next-app-template",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
