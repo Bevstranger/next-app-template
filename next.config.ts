@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
   },
   basePath: '/next-app-template', // Убедитесь, что это правильный basePath
   assetPrefix: '/next-app-template',
-  output: 'export', // Используйте только если вам нужен статический экспорт
+  
   // Дополнительные настройки, если необходимо
   images: {
     unoptimized: true, // Отключите оптимизацию изображений, если используете статический экспорт
@@ -23,3 +23,4 @@ const nextConfig: NextConfig = {
 };
 
 export default withBundleAnalyzer(nextConfig);
+
