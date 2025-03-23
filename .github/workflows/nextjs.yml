@@ -1,42 +1,42 @@
 name: Deploy Next.js site to Pages
 
 on:
-  # Запускается при пуше в ветку main
+  #         main
   push:
     branches: ['main']
 
-  # Позволяет запускать workflow вручную из вкладки Actions
+  #
   workflow_dispatch:
 
-# Устанавливает разрешения для GITHUB_TOKEN
+#
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Ограничивает одновременные деплои
+#
 concurrency:
   group: 'pages'
   cancel-in-progress: false
 
 jobs:
-  # Job для сборки
+  #
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name:
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm' # Кеширование для npm
+          cache: 'npm' #
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          # Автоматически настраивает basePath и отключает оптимизацию изображений
+          #  basePath    ,          .
           static_site_generator: next
 
       - name: Restore cache
@@ -44,27 +44,27 @@ jobs:
         with:
           path: |
             .next/cache
-          # Генерирует новый кеш при изменении package-lock.json или исходных файлов
+          #   ,        ,     .
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # Восстанавливает кеш, если исходные файлы изменились, но зависимости остались прежними
+          #   ,        ,     .
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Install dependencies
-        run: npm ci # Устанавливает зависимости из package-lock.json
+        run: npm ci #
 
       - name: Build with Next.js
-        run: npx next build # Сборка проекта
+        run: npx next build #
 
       - name: Export static site
-        run: npx next export # Экспорт статического сайта
+        run: npx next build --output out #
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out # Путь к экспортированным файлам
+          path: ./out #
 
-  # Job для деплоя
+  #
   deploy:
     environment:
       name: github-pages
