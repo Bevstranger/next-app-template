@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Отключите оптимизацию изображений, если используете статический экспорт
   },
-  distDir: 'docs',
+  
 };
 
 export default withBundleAnalyzer(nextConfig);
