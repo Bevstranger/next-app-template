@@ -6,6 +6,12 @@ export default tseslint.config(
   { ignores: ['**/*.{mjs,cjs,js,d.ts,d.mts}'] },
   {
     files: ['**/*.story.tsx'],
-    rules: { 'no-console': 'off' },
+    rules: {
+      'no-console': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'react/jsx-curly-brace-presence': 'off',
+
+      'jsx-a11y/alt-text': 'off',
+    },
   }
 );
