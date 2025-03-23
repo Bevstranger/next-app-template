@@ -1,11 +1,10 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
-import { base } from 'framer-motion/client';
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-export default withBundleAnalyzer({
+const nextConfig = {
   reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true,
@@ -13,21 +12,12 @@ export default withBundleAnalyzer({
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
-  basePath: '/next-app-template',
-  output: 'export',
-});
+  basePath: '/next-app-template', // Убедитесь, что это правильный basePath
+  output: 'export', // Используйте только если вам нужен статический экспорт
+  // Дополнительные настройки, если необходимо
+  images: {
+    unoptimized: true, // Отключите оптимизацию изображений, если используете статический экспорт
+  },
+};
 
-// const nextConfig = {
-//   output: 'export',
-
-//   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
-//   // trailingSlash: true,
-
-//   // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
-//   // skipTrailingSlashRedirect: true,
-
-//   // Optional: Change the output directory `out` -> `dist`
-//   // distDir: 'dist',
-// };
-
-// module.exports = nextConfig;
+export default withBundleAnalyzer(nextConfig);
