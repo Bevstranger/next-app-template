@@ -1,22 +1,11 @@
 'use client';
 
-import {
-  Button,
-  Group,
-  Paper,
-  SimpleGrid,
-  Text,
-  Textarea,
-  TextInput,
-  useMantineTheme,
-} from '@mantine/core';
+import { Button, Group, Paper, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { theme } from '@/theme';
 import { ContactIconsList } from './ContactIcons';
 import classes from './GetInTouch.module.css';
 
 export default function GetInTouch() {
-  const theme = useMantineTheme();
   const form = useForm({
     initialValues: { name: '', email: '', subject: '', message: '' },
 
@@ -76,11 +65,7 @@ export default function GetInTouch() {
               {...form.getInputProps('message')}
             />
             <Group justify="flex-end" mt="md">
-              <Button
-                type="submit"
-                className={classes.control}
-                style={{ background: theme.colors.green[6] }}
-              >
+              <Button type="submit" className={classes.control} style={{ background: '#34C759' }}>
                 Отправить
               </Button>
             </Group>

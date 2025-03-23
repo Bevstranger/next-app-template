@@ -10,16 +10,11 @@ import {
   Textarea,
   TextInput,
   Title,
-  useMantineTheme,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { HeaderMegaMenu } from '@/components/HeaderMegaMenu';
-import { theme } from '@/theme';
-import { ContactIconsList } from './contacts/ContactIcons';
 import classes from './contacts/GetInTouch.module.css';
 
 export default function HomePage() {
-  const theme = useMantineTheme();
   const form = useForm({
     initialValues: { name: '', email: '', subject: '', message: '' },
     validate: {
@@ -46,7 +41,7 @@ export default function HomePage() {
               высокий уровень безопасности и индивидуальный подход к каждому клиенту.
             </Text>
             <Group>
-              <Button size="lg" bg={theme.colors.primary[6]}>
+              <Button size="lg" bg="primary">
                 Рассчитать стоимость
               </Button>
               <Button
@@ -96,11 +91,7 @@ export default function HomePage() {
                   {...form.getInputProps('message')}
                 />
                 <Group justify="flex-end" mt="md">
-                  <Button
-                    type="submit"
-                    className={classes.control}
-                    style={{ background: theme.colors.green[6] }}
-                  >
+                  <Button type="submit" className={classes.control}>
                     Отправить
                   </Button>
                 </Group>

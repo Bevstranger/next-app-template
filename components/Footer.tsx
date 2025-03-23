@@ -1,14 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import {
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconBrandTwitter,
-  IconBrandVk,
-  IconBrandYoutube,
-} from '@tabler/icons-react';
-import { ActionIcon, Box, Container, Flex, Group, Text } from '@mantine/core';
+import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+import { ActionIcon, Box, Flex, Group, Text } from '@mantine/core';
 import { ContactIconsList } from '@/app/contacts/ContactIcons';
 import Logo from '../public/logo_veteran.png';
 import classes from './FooterLinks.module.css';
@@ -61,7 +55,7 @@ export function FooterLinks() {
         wrap="wrap"
       >
         <div className={classes.logo}>
-          <img src={Logo.src} />
+          <img src={Logo.src} alt="logo" />
         </div>
         <Flex wrap={'wrap'} gap={'250px'} visibleFrom="sm">
           {groups}

@@ -3,19 +3,11 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-  IconBook,
   IconCarGarage,
-  IconChartPie3,
   IconChevronDown,
-  IconCode,
-  IconCoin,
   IconDeviceCctv,
-  IconFileIsr,
   IconFileTextShield,
-  IconFingerprint,
-  IconFingerprintScan,
   IconHomeShield,
-  IconNotification,
   IconSpy,
   IconUsers,
   IconUserShield,
@@ -71,11 +63,6 @@ const mockdata = [
     icon: IconDeviceCctv,
     title: 'Системы безопасности',
     description: 'Системы видеонаблюдения, доступа и управления',
-  },
-  {
-    icon: IconFingerprintScan,
-    title: 'Пультовая охрана и реагирование',
-    description: 'Мониторинг и реагирование на события',
   },
   {
     icon: IconFileTextShield,

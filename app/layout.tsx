@@ -1,7 +1,7 @@
 import '@mantine/core/styles.css';
 
 import React from 'react';
-import { Box, ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { FooterLinks } from '@/components/Footer';
 import { HeaderMegaMenu } from '@/components/HeaderMegaMenu';
 import PageTransition from '@/components/PageTransition';
