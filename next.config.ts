@@ -1,10 +1,10 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
-
+import type { NextConfig } from 'next';
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true,
@@ -18,6 +18,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // Отключите оптимизацию изображений, если используете статический экспорт
   },
+  distDir: 'docs',
 };
 
 export default withBundleAnalyzer(nextConfig);

@@ -39,7 +39,7 @@ export default function HomePage() {
         <Container size="sm" className="relative h-full flex items-center w-1/2">
           <div className="max-w-2xl text-white">
             <Title order={1} className="text-4xl md:text-5xl mb-6">
-              Профессиональная охрана объектов в Москве
+              Профессиональная охрана объектов в
             </Title>
             <Text className="text-lg md:text-xl mb-8 text-gray-200">
               Предоставляем полный комплекс охранных услуг для бизнеса и частных лиц. Гарантируем
