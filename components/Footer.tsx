@@ -44,7 +44,7 @@ export function FooterLinks() {
   });
 
   return (
-    <Box component="footer">
+    <footer>
       <Flex
         direction="row"
         align="center"
@@ -65,7 +65,7 @@ export function FooterLinks() {
         </div>
       </Flex>
 
-      <Flex align="center" justify="space-between" bg="transparent">
+      <Flex align="center" justify="space-between" bg="transparent" p="0 20px">
         <Text c="dimmed" size="sm">
           2012-2025 В е т е р а н
         </Text>
@@ -81,6 +81,6 @@ export function FooterLinks() {
           </ActionIcon>
         </Group>
       </Flex>
-    </Box>
+    </footer>
   );
 }

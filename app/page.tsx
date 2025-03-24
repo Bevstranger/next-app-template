@@ -28,77 +28,73 @@ export default function HomePage() {
     },
   });
 
-  const handleSubmit = (values: any) => {
-    console.log(`Форма отправлена: ${JSON.stringify(values)}`);
-  };
-
   return (
-    <Paper shadow="md" radius="lg" bg="rgba(0, 0, 0, 0.5)" m="10px 20px">
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Container size="sm" className="relative h-full flex items-center w-1/2">
-          <div className="max-w-2xl text-white">
-            <Title order={1} className="text-4xl md:text-5xl mb-6">
-              Профессиональная охрана объектов в
-            </Title>
-            <Text className="text-lg md:text-xl mb-8 text-gray-200">
-              Предоставляем полный комплекс охранных услуг для бизнеса и частных лиц. Гарантируем
-              высокий уровень безопасности и индивидуальный подход к каждому клиенту.
-            </Text>
-            <Group>
-              <Button size="lg" bg="primary">
-                Рассчитать стоимость
-              </Button>
-              <Button
-                size="lg"
-                variant="white"
-                className="bg-white/10 text-white hover:bg-white/20"
-              >
-                Наши услуги
-              </Button>
-            </Group>
-          </div>
-        </Container>
-        <Container className="w-1/2">
-          <div>
-            <form className={classes.form} onSubmit={form.onSubmit(handleSubmit)}>
-              <Text fz="lg" fw={700} className={classes.title}>
-                Свяжитесь с нами
-              </Text>
+    <Paper
+      shadow="md"
+      radius="lg"
+      className={classes.wrapper}
+      bg="rgba(0, 0, 0, 0.5)"
+      m="10px 20px"
+    >
+      <Container size="xl" py="xl" className={classes.contacts}>
+        <Title order={1} className={classes.title} ta="center">
+          Профессиональная охрана объектов
+        </Title>
+        <Text className={classes.description} ta="center">
+          Предоставляем полный комплекс охранных услуг для бизнеса и частных лиц. Гарантируем
+          высокий уровень безопасности и индивидуальный подход к каждому клиенту.
+        </Text>
+        <Group justify="center" mt="md">
+          <Button size="md" color="green.6">
+            Рассчитать стоимость
+          </Button>
+          <Button size="md" variant="outline" color="white">
+            Наши услуги
+          </Button>
+        </Group>
+      </Container>
 
-              <div className={classes.fields}>
-                <SimpleGrid cols={{ base: 1, sm: 2 }}>
-                  <TextInput label="Имя" placeholder="Ваше имя" {...form.getInputProps('name')} />
-                  <TextInput
-                    label="Email"
-                    placeholder="Ваш email"
-                    {...form.getInputProps('email')}
-                  />
-                </SimpleGrid>
-
-                <TextInput
-                  mt="md"
-                  label="Тема"
-                  placeholder="Тема сообщения"
-                  {...form.getInputProps('subject')}
-                />
-
-                <Textarea
-                  mt="md"
-                  label="Ваше сообщение"
-                  placeholder="Пожалуйста, напишите нам свое сообщение"
-                  minRows={3}
-                  {...form.getInputProps('message')}
-                />
-                <Group justify="flex-end" mt="md">
-                  <Button type="submit" className={classes.control}>
-                    Отправить
-                  </Button>
-                </Group>
-              </div>
-            </form>
-          </div>
-        </Container>
-      </div>
+      <Container size="md" py="xl" className={classes.formContainer}>
+        <form className={classes.form} onSubmit={form.onSubmit(() => form.reset())}>
+          <Title order={2} className={classes.formTitle} ta="center">
+            Свяжитесь с нами
+          </Title>
+          <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" mt="md">
+            <TextInput
+              label="Имя"
+              placeholder="Ваше имя"
+              {...form.getInputProps('name')}
+              required
+            />
+            <TextInput
+              label="Email"
+              placeholder="Ваш email"
+              {...form.getInputProps('email')}
+              required
+            />
+          </SimpleGrid>
+          <TextInput
+            mt="md"
+            label="Тема"
+            placeholder="Тема сообщения"
+            {...form.getInputProps('subject')}
+            required
+          />
+          <Textarea
+            mt="md"
+            label="Ваше сообщение"
+            placeholder="Пожалуйста, напишите нам свое сообщение"
+            minRows={4}
+            {...form.getInputProps('message')}
+            required
+          />
+          <Group justify="center" mt="md">
+            <Button type="submit" size="md" style={{ background: '#34C759' }}>
+              Отправить
+            </Button>
+          </Group>
+        </form>
+      </Container>
     </Paper>
   );
 }
