@@ -27,7 +27,7 @@ export default function GetInTouch() {
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)', height: 'auto' }}
       >
         <div className={classes.contacts} style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }}>
-          <Text fz="lg" fw={700} className={classes.title} c="#fff" mb={20}>
+          <Text fz="lg" fw={700} className={classes.title} c="#fff" mb={30}>
             Контакты
           </Text>
 
@@ -35,7 +35,7 @@ export default function GetInTouch() {
         </div>
 
         <form className={classes.form} onSubmit={form.onSubmit(() => form.reset())}>
-          <Text fz="lg" fw={700} className={classes.title} mb={20}>
+          <Text fz="lg" fw={700} className={classes.title} mb={30}>
             Свяжитесь с нами
           </Text>
 

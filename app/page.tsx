@@ -61,35 +61,37 @@ export default function HomePage() {
             <Title order={2} className={classes.formTitle} ta="center">
               Свяжитесь с нами
             </Title>
-            <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" mt="md">
+            <div className={classes.fields}>
+              <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" mt="md">
+                <TextInput
+                  label="Имя"
+                  placeholder="Ваше имя"
+                  {...form.getInputProps('name')}
+                  required
+                />
+                <TextInput
+                  label="Email"
+                  placeholder="Ваш email"
+                  {...form.getInputProps('email')}
+                  required
+                />
+              </SimpleGrid>
               <TextInput
-                label="Имя"
-                placeholder="Ваше имя"
-                {...form.getInputProps('name')}
+                mt="md"
+                label="Тема"
+                placeholder="Тема сообщения"
+                {...form.getInputProps('subject')}
                 required
               />
-              <TextInput
-                label="Email"
-                placeholder="Ваш email"
-                {...form.getInputProps('email')}
+              <Textarea
+                mt="md"
+                label="Ваше сообщение"
+                placeholder="Пожалуйста, напишите нам свое сообщение"
+                minRows={4}
+                {...form.getInputProps('message')}
                 required
               />
-            </SimpleGrid>
-            <TextInput
-              mt="md"
-              label="Тема"
-              placeholder="Тема сообщения"
-              {...form.getInputProps('subject')}
-              required
-            />
-            <Textarea
-              mt="md"
-              label="Ваше сообщение"
-              placeholder="Пожалуйста, напишите нам свое сообщение"
-              minRows={4}
-              {...form.getInputProps('message')}
-              required
-            />
+            </div>
             <Group justify="center" mt="md">
               <Button type="submit" size="md" style={{ background: '#34C759' }}>
                 Отправить
