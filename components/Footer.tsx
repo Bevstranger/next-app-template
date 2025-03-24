@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
-import { ActionIcon, Box, Flex, Group, Text } from '@mantine/core';
+import { ActionIcon, Flex, Group, Text } from '@mantine/core';
 import { ContactIconsList } from '@/app/contacts/ContactIcons';
 import Logo from '../public/logo_veteran.png';
 import classes from './FooterLinks.module.css';
