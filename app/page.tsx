@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import {
   Button,
   Container,
@@ -50,7 +51,7 @@ export default function HomePage() {
             <Button size="md" color="green.6">
               Рассчитать стоимость
             </Button>
-            <Button size="md" variant="outline" color="white">
+            <Button size="md" variant="outline" color="white" component={Link} href="/services">
               Наши услуги
             </Button>
           </Group>
@@ -63,25 +64,14 @@ export default function HomePage() {
             </Title>
             <div className={classes.fields}>
               <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" mt="md">
-                <TextInput
-                  label="Имя"
-                  placeholder="Ваше имя"
-                  {...form.getInputProps('name')}
-                  required
-                />
-                <TextInput
-                  label="Email"
-                  placeholder="Ваш email"
-                  {...form.getInputProps('email')}
-                  required
-                />
+                <TextInput label="Имя" placeholder="Ваше имя" {...form.getInputProps('name')} />
+                <TextInput label="Email" placeholder="Ваш email" {...form.getInputProps('email')} />
               </SimpleGrid>
               <TextInput
                 mt="md"
                 label="Тема"
                 placeholder="Тема сообщения"
                 {...form.getInputProps('subject')}
-                required
               />
               <Textarea
                 mt="md"
@@ -89,7 +79,6 @@ export default function HomePage() {
                 placeholder="Пожалуйста, напишите нам свое сообщение"
                 minRows={4}
                 {...form.getInputProps('message')}
-                required
               />
             </div>
             <Group justify="center" mt="md">
