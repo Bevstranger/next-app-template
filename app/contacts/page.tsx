@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Group, Paper, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
+import { Button, Group, Paper, px, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { ContactIconsList } from './ContactIcons';
 import classes from './GetInTouch.module.css';
@@ -27,7 +27,7 @@ export default function GetInTouch() {
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)', height: 'auto' }}
       >
         <div className={classes.contacts} style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }}>
-          <Text fz="lg" fw={700} className={classes.title} c="#fff">
+          <Text fz="lg" fw={700} className={classes.title} c="#fff" mb={20}>
             Контакты
           </Text>
 
@@ -35,7 +35,7 @@ export default function GetInTouch() {
         </div>
 
         <form className={classes.form} onSubmit={form.onSubmit(() => form.reset())}>
-          <Text fz="lg" fw={700} className={classes.title}>
+          <Text fz="lg" fw={700} className={classes.title} mb={20}>
             Свяжитесь с нами
           </Text>
 
