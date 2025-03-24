@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Group, Paper, px, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
+import { Button, Group, Paper, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { ContactIconsList } from './ContactIcons';
 import classes from './GetInTouch.module.css';
